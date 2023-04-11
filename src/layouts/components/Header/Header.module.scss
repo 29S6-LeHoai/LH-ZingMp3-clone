@@ -1,0 +1,33 @@
+.zm-header {
+    width: 100%;
+    padding: 0 var(--distance-content);
+    background-color: var(--background-color-1);
+}
+
+.wrapper {
+    height: var(--default-layout-height-header);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    height: var(--height-header-search);
+}
+
+.zm-header-icon {
+    color: var(--white);
+    line-height: 4rem;
+    font-size: 2.4rem;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.header-right {
+}

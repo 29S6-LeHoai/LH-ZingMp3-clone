@@ -1,0 +1,143 @@
+.left-sidebar {
+    --width-sidebar: 240px;
+    height: calc(100vh - 90px);
+    background-color: var(--background-color-1);
+    width: var(--width-sidebar);
+}
+
+.left-sidebar-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.logo-item {
+    background-color: var(--background-color-1);
+    width: var(--width-sidebar);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    padding: 0 25px 0 28px;
+    height: 70px;
+
+    img {
+        width: 52px;
+        height: 52px;
+    }
+}
+
+.text-logo {
+    color: var(--white);
+    font-family: var(--font-family-logo);
+    font-size: 4.2rem;
+    margin-left: 8px;
+}
+
+.text-logo1 {
+    color: var(--white);
+    font-family: var(--font-family-logo);
+    font-size: 2.8rem;
+}
+
+// zm-nav-menu-top
+.zm-nav-menu-top {
+    margin-top: 70px;
+}
+
+// zm-nav-menu-scroll
+.scroll-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.zm-nav-menu-scroll {
+    position: absolute;
+    inset: 0px;
+    overflow: hidden auto;
+}
+
+// menuitem
+.left-sidebar-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.left-sidebar-icon {
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.left-sidebar-text {
+    color: var(--white);
+    font-size: 1.3rem;
+}
+
+.zm-nav-menu {
+    overflow-y: auto;
+}
+
+// btn login
+.login-nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--primary);
+    margin: 10px 15px;
+    padding: 15px 8px;
+    border-radius: 8px;
+
+    .btn-login-sidebar {
+        font-size: 1.2rem;
+        padding: 4px 40px;
+        margin-top: 10px;
+        border-color: var(--white);
+
+        &:hover {
+            border-color: var(--white);
+            background-color: var(--login-btn-hover);
+        }
+    }
+}
+
+.title {
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.vip-banner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(117deg, #5a4be7, #c86dd7 102%);
+    margin: 10px 15px;
+    padding: 15px 8px;
+    border-radius: 8px;
+
+    .btn-vip-sidebar {
+        color: var(--text-color);
+        font-size: 1.2rem;
+        padding: 4px 40px;
+        margin-top: 10px;
+        background-color: #ffdb00;
+        border-color: #ffdb00;
+
+        &:hover {
+            background-color: #ffdb00;
+            border-color: #ffdb00;
+        }
+    }
+}
+
+.title-vip {
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}

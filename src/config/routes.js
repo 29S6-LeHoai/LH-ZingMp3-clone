@@ -1,9 +1,14 @@
 const routes = {
     home: '/',
     following: '/following',
-    profile: '/:nickname',
-    upload: '/upload',
-    search: '/search',
+    mymusic: '/mymusic',
+    zingchart: '/zingchart',
+    mv: '/MV',
+    nhacmoi: '/nhacmoi',
+    theloai: '/theloai',
+    radio: '/radio',
+    top100: '/top100',
+    login: '/login',
 };
 
 export default routes;

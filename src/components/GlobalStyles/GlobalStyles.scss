@@ -1,17 +1,45 @@
 @import 'normalize.css';
 
 :root {
-    --primary: #fe2c55;
+    --primary: #ed2b91;
+    --primary-bg: #4b1178;
+    --purple-primary: #ed2b91;
+    --login-btn-hover: #ec3e9a;
     --back: #000;
     --white: #fff;
     --text-color: #333;
+    --bg-title: #333;
+    --text-secondary: hsla(0, 0%, 100%, 0.5);
+    --navigation-text: #dadada;
 
-    // --font-family: 'ProximaNova', sans-serif;
+    --alpha-bg: hsla(0, 0%, 100%, 0.1);
+    --text-item-hover: #fff;
+    --search-text: #eee;
+
+    // fonts
+    font-family: Inter, sans-serif;
 
     // Default layout
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
     --default-layout-horizintal-spacer: 24px;
+    --default-layout-height-header: 70px;
+    --distance-content: 60px;
+    --height-header-search: 40px;
+    --height-bottom: 90px;
+
+    // font-family
+    --font-family-logo: Patrick Hand SC, cursive;
+
+    // background color
+    --alpha-bg: hsla(0, 0%, 100%, 0.1);
+    --background-color-1: #411465;
+
+    //border
+    --border-primary: hsla(0, 0%, 100%, 0.1);
+
+    // scroll
+    --scroll-thumb-bg: hsla(0, 0%, 100%, 0.3);
 }
 
 * {
@@ -28,7 +56,7 @@ body {
     font-family: var(--font-family);
     font-size: 1.6rem;
     line-height: 1.5;
-    --text-color: #333;
+    color: var(--white);
     text-rendering: optimizeSpeed;
     overflow-y: overlay;
 }
@@ -36,12 +64,12 @@ body {
 // css srollbar
 html ::-webkit-scrollbar {
     border-radius: 0px;
-    width: 8px;
+    width: 4px;
 }
 
 html ::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background-color: rgba(22, 24, 35, 0.06);
+    background-color: var(--scroll-thumb-bg);
 }
 
 html ::-webkit-scrollbar-track {
@@ -56,47 +84,44 @@ button,
     outline: none;
 }
 
-a[href] {
+a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--white);
 }
 
-// // nhúng font
-// @font-face {
-//     font-family: ProximaNova;
-//     src: url('/assets/fonts/Proxima-Nova-Regular.woff2');
-//     font-weight: 400;
-// }
+// nhúng font
 
-// @font-face {
-//     font-family: ProximaNova;
-//     src: url('/assets/fonts/Proxima-Nova-Semibold.woff2');
-//     font-weight: 600;
-// }
+@font-face {
+    font-family: Inter;
+    src: url('/assets/fonts/Inter2.woff2');
+    font-weight: 400;
+}
 
-// @font-face {
-//     font-family: ProximaNova;
-//     src: url('/assets/fonts/Proxima-Nova-Bold.woff2');
-//     font-weight: 700;
-// }
-// @font-face {
-//     font-family: SofiaPro;
-//     src: url('/assets/fonts/sofiapro-bold.woff2');
-//     font-weight: 700;
-// }
+@font-face {
+    font-family: Inter;
+    src: url('/assets/fonts/Inter3.woff2');
+    font-weight: 500;
+}
 
-// custom css tippy
-body {
-    .tippy-content {
-        font-size: 1.6rem;
-        padding: 8px;
-    }
+@font-face {
+    font-family: Inter;
+    src: url('/assets/fonts/Inter.woff2');
+    font-weight: 700;
+}
 
-    .tippy-box {
-        background-color: rgba(84, 84, 84, 0.92);
-    }
+// thanh ngang ngăn cách
+// divide
+.divide {
+    position: relative;
+    height: 1px;
+    margin: 10px 0;
 
-    .tippy-arrow {
-        color: rgba(84, 84, 84, 0.92);
+    &::after {
+        content: '';
+        border-top: 1px solid var(--border-primary);
+        position: absolute;
+        left: 25px;
+        right: 25px;
+        top: 0;
     }
 }

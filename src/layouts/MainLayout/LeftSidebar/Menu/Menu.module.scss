@@ -1,0 +1,23 @@
+.menu-item {
+    display: flex;
+    color: var(--white);
+    align-items: center;
+    padding: 8px 25px;
+    border-left: 3px solid transparent;
+
+    &.active {
+        background-color: var(--alpha-bg);
+        color: var(--text-item-hover);
+        border-left: 3px solid var(--purple-primary);
+    }
+}
+
+.title {
+    color: var(--navigation-text);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-left: 8px;
+}
+
+.zm-nav-menu {
+}

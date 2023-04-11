@@ -1,14 +1,11 @@
 import config from '~/config';
 
-// Layouts
-import { HeaderOnly } from '~/layouts';
+// // Layouts
+// import HeaderOnly from '~/layouts/HeaderOnly';
 
 // pages
-import Home from '~/pages/Home';
-import Following from '~/pages/Following';
-import Profile from '~/pages/Profile';
-import Upload from '~/pages/Upload';
-import Search from '~/pages/Search';
+import { Mymusic, Home, Zingchart, Radio, Following, MV, Nhacmoi, Theloai, Top100, Login } from '~/pages';
+
 // cấu hình Router không cần login
 const publicRoutes = [
     {
@@ -16,24 +13,49 @@ const publicRoutes = [
         component: Home,
     },
     {
+        path: config.routes.zingchart,
+        component: Zingchart,
+    },
+
+    {
+        path: config.routes.mymusic,
+        component: Mymusic,
+    },
+
+    {
+        path: config.routes.radio,
+        component: Radio,
+        // layout: HeaderOnly,
+    },
+
+    {
         path: config.routes.following,
         component: Following,
     },
 
     {
-        path: config.routes.profile,
-        component: Profile,
+        path: config.routes.nhacmoi,
+        component: Nhacmoi,
     },
 
     {
-        path: config.routes.upload,
-        component: Upload,
-        layout: HeaderOnly,
+        path: config.routes.top100,
+        component: Top100,
     },
 
     {
-        path: config.routes.search,
-        component: Search,
+        path: config.routes.theloai,
+        component: Theloai,
+    },
+
+    {
+        path: config.routes.mv,
+        component: MV,
+    },
+
+    {
+        path: config.routes.login,
+        component: Login,
         layout: null,
     },
 ];
