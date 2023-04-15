@@ -1,10 +1,10 @@
 export { default as Following } from './Following';
-export { default as Home } from './Home';
+export { default as HomePage } from './HomePage/HomePage';
 export { default as Nhacmoi } from './Nhacmoi';
-export { default as Mymusic } from './Mymusic';
+export { default as MymusicPage } from './MymusicPage/MymusicPage';
 export { default as Radio } from './Radio';
 export { default as MV } from './MV';
 export { default as Theloai } from './Theloai';
 export { default as Top100 } from './Top100';
-export { default as Zingchart } from './Zingchart';
+export { default as ZingchartPage } from './ZingchartPage/ZingchartPage';
 export { default as Login } from './Login';

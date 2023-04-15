@@ -53,6 +53,10 @@ form {
     padding: 5px;
     background-color: transparent;
     cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
 }
 
 .input-search {

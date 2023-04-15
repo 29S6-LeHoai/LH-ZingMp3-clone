@@ -15,6 +15,7 @@
     --alpha-bg: hsla(0, 0%, 100%, 0.1);
     --text-item-hover: #fff;
     --search-text: #eee;
+    --dark-alpha-50: rgba(0, 0, 0, 0.5);
 
     // fonts
     font-family: Inter, sans-serif;
@@ -32,6 +33,7 @@
     --font-family-logo: Patrick Hand SC, cursive;
 
     // background color
+    --loading-bg: rgba(0, 0, 0, 0.05);
     --alpha-bg: hsla(0, 0%, 100%, 0.1);
     --background-color-1: #411465;
 
@@ -124,4 +126,39 @@ a {
         right: 25px;
         top: 0;
     }
+}
+
+// loading
+.loading {
+    width: 100%;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000 !important;
+}
+
+// Loading skeleton
+// THE LOADING EFFECT
+.skeleton {
+    // background-color: #f3f5f741;
+    background-color: var(--loading-bg);
+
+    background-image: linear-gradient(90deg, rgba(#eee, 0), rgba(#eee, 0.8), rgba(#eee, 0));
+    background-size: 40px 100%;
+    background-repeat: no-repeat;
+    background-position: left -40px top 0;
+    animation: shine 1.3s ease-in-out infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: right -40px top 0;
+    }
+}
+
+.swiper-pagination {
+    visibility: hidden;
 }

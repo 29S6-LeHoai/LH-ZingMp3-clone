@@ -3,28 +3,4 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    .icon-setting {
-        min-width: 40px;
-        height: 40px;
-        margin-right: 10px;
-        color: var(--white);
-        font-size: 1.6rem;
-        border-radius: 50%;
-        background-color: var(--alpha-bg);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .tippy-content {
-            font-size: 1.2rem;
-            padding: 5px 10px;
-        }
-    }
-
-    .login-btn {
-        min-width: 120px;
-        padding: 8px 15px;
-        font-size: 1.4rem;
-    }
 }

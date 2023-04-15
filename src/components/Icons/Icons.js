@@ -1,10 +1,12 @@
-import { MdOutlineLibraryMusic, MdOutlineClear } from 'react-icons/md';
+import { MdOutlineLibraryMusic, MdOutlineClear, MdLogout } from 'react-icons/md';
 import { HiOutlineArrowRight, HiOutlineArrowLeft, HiOutlineArrowUpRight } from 'react-icons/hi2';
-import { HiOutlinePhone } from 'react-icons/hi';
+import { HiOutlinePhone, HiOutlineChevronRight, HiOutlineChevronLeft } from 'react-icons/hi';
 import { IoSettingsOutline } from 'react-icons/io5';
-import { AiOutlinePlayCircle, AiOutlineRight, AiOutlineInfoCircle } from 'react-icons/ai';
+import { AiOutlinePlayCircle, AiOutlineRight, AiOutlineInfoCircle, AiOutlineClose } from 'react-icons/ai';
 import { RxSwitch } from 'react-icons/rx';
-import { BsSearch } from 'react-icons/bs';
+import { BsSearch, BsShieldCheck } from 'react-icons/bs';
+import { RiVipDiamondLine } from 'react-icons/ri';
+import { ImUpload3 } from 'react-icons/im';
 
 const Icons = {
     MdOutlineLibraryMusic,
@@ -19,6 +21,13 @@ const Icons = {
     HiOutlinePhone,
     HiOutlineArrowUpRight,
     RxSwitch,
+    RiVipDiamondLine,
+    BsShieldCheck,
+    ImUpload3,
+    MdLogout,
+    AiOutlineClose,
+    HiOutlineChevronRight,
+    HiOutlineChevronLeft,
 };
 
 export const MymusicIcon = ({ height = '2rem', width = '2rem', className }) => {

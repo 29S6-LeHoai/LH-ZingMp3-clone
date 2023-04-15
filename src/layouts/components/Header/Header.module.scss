@@ -1,7 +1,10 @@
 .zm-header {
-    width: 100%;
+    position: fixed;
+    right: 330px;
+    left: 240px;
     padding: 0 var(--distance-content);
     background-color: var(--background-color-1);
+    z-index: 99;
 }
 
 .wrapper {

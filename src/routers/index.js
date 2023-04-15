@@ -4,22 +4,22 @@ import config from '~/config';
 // import HeaderOnly from '~/layouts/HeaderOnly';
 
 // pages
-import { Mymusic, Home, Zingchart, Radio, Following, MV, Nhacmoi, Theloai, Top100, Login } from '~/pages';
+import { MymusicPage, HomePage, ZingchartPage, Radio, Following, MV, Nhacmoi, Theloai, Top100, Login } from '~/pages';
 
 // cấu hình Router không cần login
 const publicRoutes = [
     {
         path: config.routes.home,
-        component: Home,
+        component: HomePage,
     },
     {
         path: config.routes.zingchart,
-        component: Zingchart,
+        component: ZingchartPage,
     },
 
     {
         path: config.routes.mymusic,
-        component: Mymusic,
+        component: MymusicPage,
     },
 
     {

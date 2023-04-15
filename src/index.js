@@ -1,21 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+import './assets/styles/styles.scss';
 import App from '~/App';
 import reportWebVitals from './reportWebVitals';
 import GlobalStyles from './components/GlobalStyles/GlobalStyles';
 import { Provider } from 'react-redux';
-
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import reduxConfig from './redux';
 
 const store = reduxConfig();
+
+const queryClient = new QueryClient({
+    defaultOptions: {
+        queries: {
+            refetchOnWindowFocus: false,
+            retry: 3,
+        },
+    },
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <Provider store={store}>
-            <GlobalStyles>
-                <App />
-            </GlobalStyles>
+            <QueryClientProvider client={queryClient}>
+                <GlobalStyles>
+                    <App />
+                </GlobalStyles>
+            </QueryClientProvider>
         </Provider>
     </React.StrictMode>,
 );

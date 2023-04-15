@@ -15,7 +15,7 @@ function ItemSetting() {
     const [open, setOpen] = useState(false);
 
     useEffect(() => {
-        console.log(open);
+        // console.log(open);
     });
     return (
         <div>

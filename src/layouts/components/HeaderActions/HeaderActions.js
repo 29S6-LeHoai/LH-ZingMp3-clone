@@ -2,28 +2,76 @@ import classNames from 'classnames/bind';
 import 'tippy.js/dist/tippy.css'; // optional
 
 import styles from './HeaderActions.module.scss';
-import Button from '~/components/Button/Button';
-import config from '~/config';
 import ItemSetting from '~/components/NavBar/ItemSetting/ItemSetting';
-import Tippy from '@tippyjs/react';
-import { ThemeIcon } from '~/components/Icons';
+import ItemLogin from '~/components/NavBar/ItemLogin/ItemLogin';
+
+import Icons from '~/components/Icons/Icons';
+import ItemTheme from '~/components/NavBar/ItemTheme/ItemTheme';
+
+const { RiVipDiamondLine, BsShieldCheck, ImUpload3, MdLogout } = Icons;
 
 const cx = classNames.bind(styles);
+
+const MENU_ITEM = [
+    {
+        icon: <RiVipDiamondLine />,
+        title: 'Nâng Cấp VIP',
+        to: '/vip',
+    },
+    {
+        icon: <BsShieldCheck />,
+        title: 'Thông Tin Tài Khoản',
+        to: '/profile',
+    },
+
+    {
+        icon: <ImUpload3 />,
+        title: 'Tải Lên',
+        to: '/upload',
+    },
+
+    {
+        icon: <MdLogout />,
+        title: 'Đăng Xuất',
+        to: '/logout',
+        separate: true,
+    },
+];
+
+const MENU_THEME_ITEM = [
+    {
+        icon: <RiVipDiamondLine />,
+        title: 'Nâng Cấp VIP',
+        to: '/vip',
+    },
+    {
+        icon: <BsShieldCheck />,
+        title: 'Thông Tin Tài Khoản',
+        to: '/profile',
+    },
+
+    {
+        icon: <ImUpload3 />,
+        title: 'Tải Lên',
+        to: '/upload',
+    },
+
+    {
+        icon: <MdLogout />,
+        title: 'Đăng Xuất',
+        to: '/logout',
+        separate: true,
+    },
+];
 
 function HeaderActions() {
     return (
         <div className={cx('header_content-right')}>
-            <Tippy content="Chủ Đề" placement="bottom">
-                <button className={cx('icon-setting')}>
-                    <ThemeIcon />
-                </button>
-            </Tippy>
+            <ItemTheme data={MENU_THEME_ITEM} />
 
             <ItemSetting />
 
-            <Button className={cx('login-btn')} to={config.routes.login} primary rounded>
-                Đăng nhập
-            </Button>
+            <ItemLogin items={MENU_ITEM}></ItemLogin>
         </div>
     );
 }

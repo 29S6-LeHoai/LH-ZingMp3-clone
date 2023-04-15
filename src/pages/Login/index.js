@@ -1,5 +1,7 @@
+import { memo } from 'react';
+
 function Login() {
-    return <h2>Login page</h2>;
+    return <div>{/* <SliderHomePage></SliderHomePage> */}</div>;
 }
 
-export default Login;
+export default memo(Login);

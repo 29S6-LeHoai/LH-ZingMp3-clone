@@ -30,46 +30,52 @@ const MENU_SETTING_ITEM = [
 
 const SettingPortalChildren = () => {
     const [onSwitch1, setOnSwitch1] = useState(false);
-    const [onSwitch2, setOnSwitch2] = useState(false);
+    const [active, setActive] = useState(true);
+    const [active2, setActive2] = useState(false);
 
     const handleClick = () => {
-        if (onSwitch1 === false) {
-            setOnSwitch1(true);
-        } else {
-            setOnSwitch1(false);
-        }
+        setOnSwitch1(!onSwitch1);
     };
 
     const handleClick2 = () => {
-        if (onSwitch2 === false) {
-            setOnSwitch2(true);
-        } else {
-            setOnSwitch2(false);
-        }
+        setActive(true);
+        setActive2(false);
+    };
+
+    const handleClick3 = () => {
+        setActive2(true);
+        setActive(false);
     };
     return (
         <div className="list-option">
-            <div className={cx('option')} onClick={handleClick}>
+            <div className={`${cx('option-screen')}`} onClick={handleClick}>
                 <div className={cx('left')}>
-                    <div>
+                    <div className={cx('option-screen-title')}>
                         <p>Luôn phát nhạc full màn hình</p>
                     </div>
+                    <span className={`${classNames(styles.icon)} ${onSwitch1 && classNames(styles.active)}`}>
+                        {onSwitch1 ? <FontAwesomeIcon icon={faToggleOn} /> : <FontAwesomeIcon icon={faToggleOff} />}
+                    </span>
                 </div>
-                <span className={cx('icon')}>
-                    {onSwitch1 ? <FontAwesomeIcon icon={faToggleOn} /> : <FontAwesomeIcon icon={faToggleOff} />}
-                </span>
             </div>
 
-            <div className={cx('option')} onClick={handleClick2}>
-                <div className={cx('left')}>
-                    <div>
-                        <b>SQ • 128</b>
-                    </div>
-                    <div className={cx('desc')}>Giảm sử dụng dữ liệu cho các kết nối chậm. </div>
+            <div className={cx('option-quality')}>
+                <h4 className={cx('header-quality')}>Chất lượng nhạc</h4>
+                <div className={cx('body-quality')}>
+                    <button
+                        className={`${cx('header-quality-title')} ${active && cx('active')}`}
+                        onClick={handleClick2}
+                    >
+                        SQ • 128
+                    </button>
+
+                    <button
+                        className={`${cx('header-quality-title')} ${active2 && cx('active')}`}
+                        onClick={handleClick3}
+                    >
+                        HQ • 320
+                    </button>
                 </div>
-                <span className={cx('icon')}>
-                    {onSwitch2 ? <FontAwesomeIcon icon={faToggleOn} /> : <FontAwesomeIcon icon={faToggleOff} />}
-                </span>
             </div>
         </div>
     );

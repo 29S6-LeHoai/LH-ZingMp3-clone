@@ -16,8 +16,8 @@
     position: relative;
 
     &:hover {
-        -webkit-filter: brightness(0.8);
-        filter: brightness(0.8);
+        // -webkit-filter: brightness(0.8);
+        // filter: brightness(0.8);
         .setting_item-title {
             visibility: visible;
         }
@@ -26,11 +26,11 @@
 
 .setting_item-title {
     position: absolute;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding: 6px 7px;
     margin-top: 5px;
     min-width: 90px;
-    color: var(--white);
+    color: var(--navigation-text);
     top: 100%;
     right: 50%;
     border-radius: 4px;
@@ -106,10 +106,15 @@
 // SettingPortalChildren
 
 .wrapper-content {
+    min-width: 290px;
     background-color: var(--primary-bg);
 }
 
-.option {
+.list-option {
+    padding: 8px 12px;
+}
+
+.option-screen {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -119,16 +124,58 @@
         color: var(--white);
     }
 
-    .active .icon {
+    .active {
+        font-size: 2.2rem;
         color: var(--primary);
     }
 }
 
 .left {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 5px 7px;
+}
+
+.option-screen-title {
+    display: flex;
+    font-size: 1.3rem;
+    color: var(--white);
+    flex: 1;
 }
 
 .desc {
     font-size: 1.2rem;
     color: var(--text-secondary);
+}
+
+.option-quality {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 7px;
+}
+
+.header-quality {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.body-quality {
+    display: flex;
+    align-items: center;
+
+    .active {
+        background-color: var(--primary);
+    }
+}
+
+.header-quality-title {
+    padding: 3px 5px;
+    margin-right: 5px;
+    font-size: 1rem;
+    border-radius: 4px;
+    color: var(--white);
+    background-color: var(--alpha-bg);
 }

@@ -1,4 +1,5 @@
 import classNames from 'classnames/bind';
+
 import styles from './MainLayout.module.scss';
 import LeftSidebar from './LeftSidebar/LeftSidebar';
 import Header from '~/layouts/components/Header/Header';
@@ -11,9 +12,11 @@ function MainLayout({ children }) {
     return (
         <div className={cx('wrapper')}>
             <LeftSidebar />
+            <Header />
             <div className={cx('container')}>
-                <Header />
-                <div className={cx('content')}>{children}</div>
+                <div id="scrollableDiv" className={cx('content')}>
+                    {children}
+                </div>
             </div>
             <RightSidebar />
             <BottomSidebar />
