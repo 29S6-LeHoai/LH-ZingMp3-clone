@@ -1,0 +1,149 @@
+// NewReleaseItem
+.new-music-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.player_queue-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 10px;
+
+    &:hover {
+        background-color: var(--alpha-bg);
+        transition: 0.2s;
+        cursor: pointer;
+        border-radius: 5px;
+
+        .player_queue_item-right {
+            display: flex;
+        }
+    }
+}
+
+.player_queue-music-info {
+    margin-left: 10px;
+}
+
+.player_queue_item-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player_queue-left {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        .player_queue-img-hover {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+.player_queue-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+}
+
+.player_queue-img-hover {
+    position: absolute;
+    display: none;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+
+    .player_queue-play-icon {
+        font-size: 2.2rem;
+    }
+}
+
+.player_queue-music {
+    margin-top: 3px;
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.player_queue-music,
+.play_queue-time,
+.player_queue-name-artist {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    height: auto;
+    overflow: hidden;
+}
+
+.play_queue-time,
+.player_queue-name-artist {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-top: 3px;
+    cursor: pointer;
+
+    span a {
+        color: var(--text-secondary);
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            color: var(--link-text-hover);
+        }
+    }
+}
+
+.player_queue_item-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    display: none;
+}
+
+.player_queue-btn {
+    position: relative;
+    font-size: 1.8rem;
+
+    &:hover .play_title-hover {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .play_title-hover {
+        position: absolute;
+        display: none;
+
+        font-size: 1.2rem;
+        width: 120px;
+        top: -50%;
+        right: 50%;
+        padding: 3px;
+        border-radius: 4px;
+        transform: translate(50%, -65%);
+        color: var(--navigation-text);
+        background-color: var(--bg-title);
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: 100%;
+            border-width: 6px;
+            border-style: solid;
+            border-color: var(--bg-title) transparent transparent transparent;
+        }
+    }
+}

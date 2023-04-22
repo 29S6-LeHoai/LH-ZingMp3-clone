@@ -1,7 +1,7 @@
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import React, { useLayoutEffect, useState, memo, useEffect } from 'react';
+import React, { useLayoutEffect, useState, memo } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper';
@@ -9,7 +9,7 @@ import { Autoplay, Navigation, Pagination } from 'swiper';
 import { useGetHomePage } from '~/apis/getHome';
 import LoadingSkeleton from '~/components/loading/LoadingSkeleton';
 import styled from 'styled-components';
-import Icons from '../Icons/Icons';
+import Icons from '../../Icons/Icons';
 
 const { HiOutlineChevronRight, HiOutlineChevronLeft } = Icons;
 
@@ -19,8 +19,6 @@ const SliderHomePage = memo(() => {
     const dataNice = data?.data?.items.filter((e) => {
         return e.sectionType === 'banner';
     });
-
-    useEffect(() => console.log(status));
 
     useLayoutEffect(() => {
         if (data) {
@@ -143,7 +141,7 @@ const SliderHomePage = memo(() => {
                                 },
                             }}
                         >
-                            {datas &&
+                            {(datas || status === 'success') &&
                                 datas.length > 0 &&
                                 datas.map((e, index) => {
                                     return (
@@ -180,21 +178,22 @@ const SliderHomePage = memo(() => {
                                     </span>
                                 </button>
                             </>
-
-                            {(!datas || status === 'success') &&
+                            {(!data || status === 'loading') &&
                                 Array(3)
                                     .fill(0)
-                                    .map((e, index) => (
-                                        <SwiperSlide key={index}>
-                                            <div className="gallery-item">
-                                                <div className="zm-card  cursor-pointer">
-                                                    <div className="zm-card-image ">
-                                                        <LoadingSkeleton className="w-full h-[216px] "></LoadingSkeleton>
+                                    .map((e, index) => {
+                                        return (
+                                            <SwiperSlide key={index}>
+                                                <div className="gallery-item">
+                                                    <div className="zm-card  cursor-pointer">
+                                                        <div className="zm-card-image">
+                                                            <LoadingSkeleton className=" w-full h-[216px] " />
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </SwiperSlide>
-                                    ))}
+                                            </SwiperSlide>
+                                        );
+                                    })}
                         </Swiper>
                     </div>
                 </div>

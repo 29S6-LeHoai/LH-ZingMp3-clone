@@ -1,9 +1,10 @@
 import React, { memo, useEffect } from 'react';
-import SliderHomePage from '~/components/SliderHome/SliderHomePage';
+
 import scrollTop from '~/ultis/scrollToTop';
 import classNames from 'classnames/bind';
 
 import Styles from './HomePage.module.scss';
+import { NewMusicPage, SliderHomePage } from '~/components/HomePageChildren';
 
 const cx = classNames.bind(Styles);
 function HomePage() {
@@ -13,6 +14,7 @@ function HomePage() {
     return (
         <div className={cx('home-page-wrapper')}>
             <SliderHomePage />
+            <NewMusicPage />
         </div>
     );
 }

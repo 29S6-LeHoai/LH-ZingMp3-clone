@@ -1,13 +1,11 @@
-import classNames from 'classnames/bind';
-import styles from './BottomSidebar.module.scss';
+import './BottomSidebar.scss';
 import images from '~/assets/images';
-
-const cx = classNames.bind(styles);
+import BottomControlLeft from './BottomControlLeft/BottomControlLeft';
 
 function BottomSidebar() {
     return (
-        <div style={{ backgroundImage: `url(${images.imageBottomPlayer})` }} className={cx('wrapper')}>
-            <h2>Bottom Player</h2>
+        <div style={{ backgroundImage: `url(${images.imageBottomPlayer})` }} className="player-control-main">
+            <BottomControlLeft />
         </div>
     );
 }

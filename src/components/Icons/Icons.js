@@ -1,8 +1,15 @@
-import { MdOutlineLibraryMusic, MdOutlineClear, MdLogout } from 'react-icons/md';
+import { MdOutlineLibraryMusic, MdOutlineClear, MdLogout, MdOutlineMoreHoriz } from 'react-icons/md';
 import { HiOutlineArrowRight, HiOutlineArrowLeft, HiOutlineArrowUpRight } from 'react-icons/hi2';
 import { HiOutlinePhone, HiOutlineChevronRight, HiOutlineChevronLeft } from 'react-icons/hi';
-import { IoSettingsOutline } from 'react-icons/io5';
-import { AiOutlinePlayCircle, AiOutlineRight, AiOutlineInfoCircle, AiOutlineClose } from 'react-icons/ai';
+import { IoSettingsOutline, IoPlay } from 'react-icons/io5';
+import {
+    AiOutlineHeart,
+    AiFillHeart,
+    AiOutlinePlayCircle,
+    AiOutlineRight,
+    AiOutlineInfoCircle,
+    AiOutlineClose,
+} from 'react-icons/ai';
 import { RxSwitch } from 'react-icons/rx';
 import { BsSearch, BsShieldCheck } from 'react-icons/bs';
 import { RiVipDiamondLine } from 'react-icons/ri';
@@ -28,6 +35,10 @@ const Icons = {
     AiOutlineClose,
     HiOutlineChevronRight,
     HiOutlineChevronLeft,
+    AiOutlineHeart,
+    AiFillHeart,
+    MdOutlineMoreHoriz,
+    IoPlay,
 };
 
 export const MymusicIcon = ({ height = '2rem', width = '2rem', className }) => {
@@ -46,6 +57,161 @@ export const MymusicIcon = ({ height = '2rem', width = '2rem', className }) => {
                 d="M5.41666 2.29166C5.07148 2.29166 4.79166 2.57148 4.79166 2.91666C4.79166 3.26183 5.07148 3.54166 5.41666 3.54166H14.5833C14.9285 3.54166 15.2083 3.26183 15.2083 2.91666C15.2083 2.57148 14.9285 2.29166 14.5833 2.29166H5.41666ZM2.5 8.33333C2.5 6.60744 3.89911 5.20833 5.625 5.20833H14.375C16.1009 5.20833 17.5 6.60744 17.5 8.33333V14.1667C17.5 15.8925 16.1009 17.2917 14.375 17.2917H5.625C3.89911 17.2917 2.5 15.8925 2.5 14.1667V8.33333ZM5.625 6.45833C4.58947 6.45833 3.75 7.29779 3.75 8.33333V14.1667C3.75 15.2022 4.58946 16.0417 5.625 16.0417H14.375C15.4105 16.0417 16.25 15.2022 16.25 14.1667V8.33333C16.25 7.29779 15.4105 6.45833 14.375 6.45833H5.625ZM12.5 7.3C11.3494 7.3 10.4166 8.23274 10.4166 9.38333V10.8832C10.1041 10.7235 9.75006 10.6333 9.37496 10.6333C8.10931 10.6333 7.0833 11.6594 7.0833 12.925C7.0833 14.1907 8.10931 15.2167 9.37496 15.2167C10.5759 15.2167 11.561 14.293 11.6587 13.1173C11.6639 13.0847 11.6666 13.0513 11.6666 13.0173V9.38333C11.6666 8.92309 12.0397 8.55 12.5 8.55H13.2291C13.5743 8.55 13.8541 8.27018 13.8541 7.925C13.8541 7.57982 13.5743 7.3 13.2291 7.3H12.5ZM8.3333 12.925C8.3333 12.3497 8.79967 11.8833 9.37496 11.8833C9.95026 11.8833 10.4166 12.3497 10.4166 12.925C10.4166 13.5003 9.95026 13.9667 9.37496 13.9667C8.79967 13.9667 8.3333 13.5003 8.3333 12.925Z"
             ></path>
         </svg>
+    );
+};
+
+export const LoadingIcon = ({ notLoading }) => {
+    return (
+        <>
+            <i className={`icon   ${notLoading ? 'load' : 'loading'}`}>
+                <svg className="lds-spinner" width="34px" height="34px" viewBox="0 0 100 100">
+                    <g transform="rotate(0 50 50)">
+                        <rect x={47} y={24} rx="3.7600000000000002" ry="1.92" width={6} height={12}>
+                            <animate
+                                attributeName="opacity"
+                                values="1;0"
+                                keyTimes="0;1"
+                                dur="1s"
+                                begin="-0.9166666666666666s"
+                                repeatCount="indefinite"
+                            />
+                        </rect>
+                    </g>
+                    <g transform="rotate(30 50 50)">
+                        <rect x={47} y={24} rx="3.7600000000000002" ry="1.92" width={6} height={12}>
+                            <animate
+                                attributeName="opacity"
+                                values="1;0"
+                                keyTimes="0;1"
+                                dur="1s"
+                                begin="-0.8333333333333334s"
+                                repeatCount="indefinite"
+                            />
+                        </rect>
+                    </g>
+                    <g transform="rotate(60 50 50)">
+                        <rect x={47} y={24} rx="3.7600000000000002" ry="1.92" width={6} height={12}>
+                            <animate
+                                attributeName="opacity"
+                                values="1;0"
+                                keyTimes="0;1"
+                                dur="1s"
+                                begin="-0.75s"
+                                repeatCount="indefinite"
+                            />
+                        </rect>
+                    </g>
+                    <g transform="rotate(90 50 50)">
+                        <rect x={47} y={24} rx="3.7600000000000002" ry="1.92" width={6} height={12}>
+                            <animate
+                                attributeName="opacity"
+                                values="1;0"
+                                keyTimes="0;1"
+                                dur="1s"
+                                begin="-0.6666666666666666s"
+                                repeatCount="indefinite"
+                            />
+                        </rect>
+                    </g>
+                    <g transform="rotate(120 50 50)">
+                        <rect x={47} y={24} rx="3.7600000000000002" ry="1.92" width={6} height={12}>
+                            <animate
+                                attributeName="opacity"
+                                values="1;0"
+                                keyTimes="0;1"
+                                dur="1s"
+                                begin="-0.5833333333333334s"
+                                repeatCount="indefinite"
+                            />
+                        </rect>
+                    </g>
+                    <g transform="rotate(150 50 50)">
+                        <rect x={47} y={24} rx="3.7600000000000002" ry="1.92" width={6} height={12}>
+                            <animate
+                                attributeName="opacity"
+                                values="1;0"
+                                keyTimes="0;1"
+                                dur="1s"
+                                begin="-0.5s"
+                                repeatCount="indefinite"
+                            />
+                        </rect>
+                    </g>
+                    <g transform="rotate(180 50 50)">
+                        <rect x={47} y={24} rx="3.7600000000000002" ry="1.92" width={6} height={12}>
+                            <animate
+                                attributeName="opacity"
+                                values="1;0"
+                                keyTimes="0;1"
+                                dur="1s"
+                                begin="-0.4166666666666667s"
+                                repeatCount="indefinite"
+                            />
+                        </rect>
+                    </g>
+                    <g transform="rotate(210 50 50)">
+                        <rect x={47} y={24} rx="3.7600000000000002" ry="1.92" width={6} height={12}>
+                            <animate
+                                attributeName="opacity"
+                                values="1;0"
+                                keyTimes="0;1"
+                                dur="1s"
+                                begin="-0.3333333333333333s"
+                                repeatCount="indefinite"
+                            />
+                        </rect>
+                    </g>
+                    <g transform="rotate(240 50 50)">
+                        <rect x={47} y={24} rx="3.7600000000000002" ry="1.92" width={6} height={12}>
+                            <animate
+                                attributeName="opacity"
+                                values="1;0"
+                                keyTimes="0;1"
+                                dur="1s"
+                                begin="-0.25s"
+                                repeatCount="indefinite"
+                            />
+                        </rect>
+                    </g>
+                    <g transform="rotate(270 50 50)">
+                        <rect x={47} y={24} rx="3.7600000000000002" ry="1.92" width={6} height={12}>
+                            <animate
+                                attributeName="opacity"
+                                values="1;0"
+                                keyTimes="0;1"
+                                dur="1s"
+                                begin="-0.16666666666666666s"
+                                repeatCount="indefinite"
+                            />
+                        </rect>
+                    </g>
+                    <g transform="rotate(300 50 50)">
+                        <rect x={47} y={24} rx="3.7600000000000002" ry="1.92" width={6} height={12}>
+                            <animate
+                                attributeName="opacity"
+                                values="1;0"
+                                keyTimes="0;1"
+                                dur="1s"
+                                begin="-0.08333333333333333s"
+                                repeatCount="indefinite"
+                            />
+                        </rect>
+                    </g>
+                    <g transform="rotate(330 50 50)">
+                        <rect x={47} y={24} rx="3.7600000000000002" ry="1.92" width={6} height={12}>
+                            <animate
+                                attributeName="opacity"
+                                values="1;0"
+                                keyTimes="0;1"
+                                dur="1s"
+                                begin="0s"
+                                repeatCount="indefinite"
+                            />
+                        </rect>
+                    </g>
+                </svg>
+            </i>
+        </>
     );
 };
 
